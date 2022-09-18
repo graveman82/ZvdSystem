@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ZvdSystem" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc_compiler_x32" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../../bin/ZvdSystem_Debug" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../bin" />
+				<Option object_output="obj/Debug/" />
+				<Option type="3" />
+				<Option compiler="gnu_gcc_compiler_x32" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-DBUILD_DLL" />
+					<Add option="-DZVD_DEBUG_LEVEL=ZVD_DEBUG_LEVEL_HIGH" />
+					<Add option="-DZVD_USE_MSGBOX_FOR_ASSERT" />
+				</Compiler>
+				<Linker>
+					<Add library="user32" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ZvdSystem" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="gnu_gcc_compiler_x32" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-DBUILD_DLL" />
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="user32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="../../inc" />
+			<Add directory="../../sdkinc" />
+		</Compiler>
+		<Unit filename="../../inc/Debug/ZvdSysAssert.h" />
+		<Unit filename="../../inc/Debug/ZvdSysDebugDefs.h" />
+		<Unit filename="../../inc/Debug/ZvdSysStaticAssert.h" />
+		<Unit filename="../../inc/ZvdSysCommonMacros.h" />
+		<Unit filename="../../inc/ZvdSysDoc_CodeSnippets.h" />
+		<Unit filename="../../inc/ZvdSysMem.h" />
+		<Unit filename="../../inc/ZvdSysPlatform.h" />
+		<Unit filename="../../inc/ZvdSysStaticAllocatedSingleton.h" />
+		<Unit filename="../../inc/ZvdSysStringify.h" />
+		<Unit filename="../../inc/ZvdSysUnion.h" />
+		<Unit filename="../../sdkinc/ZvdSystem.h" />
+		<Unit filename="../../sdkinc/ZvdSystemDefs.h" />
+		<Unit filename="../../src/Debug/ZvdSysAssert.cpp" />
+		<Unit filename="../../src/Debug/ZvdSysDebugDefs.cpp" />
+		<Unit filename="../../src/ZvdSysMem.cpp" />
+		<Unit filename="../../src/ZvdSystem.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
